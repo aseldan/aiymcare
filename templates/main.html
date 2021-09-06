@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aiym Care</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+      .block:not(:last-child) {
+      margin-bottom: 1.5rem;
+      }
+    </style>
+    
+  </head>
+  <body>
+
+    <nav class="navbar is-success is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{{url_for('welcome')}}">
+          <img src="{{ url_for('static', filename='aiym.png')}}" width="100" height="80" >
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          {% block session %}
+          {% endblock %}
+        </div>
+      </div>
+      
+    </nav>
+    
+  
+  {% block content %}
+  {% endblock %}
+
+
+  </body>
+</html>

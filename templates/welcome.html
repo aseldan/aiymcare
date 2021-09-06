@@ -1,0 +1,44 @@
+{% extends 'main.html'%}
+
+{% block session %}
+      <div class="navbar-item">
+        <a class="navbar-link">
+          Login
+        </a>
+      </div>
+{% endblock %}  
+
+{% block content %}
+
+<section class="hero is-success is-info is-large">
+    <div class="hero-body">
+        <div class="columns">
+            <div class="column">
+                <p class="title">Aiym Care</p>
+                <div class="block"><strong>Aiym Care</strong> is a new platform to monitor your health and baby's growth. </div>
+                <div class="block">Weekly pregnancy tracker and recommendations from specialists.</div>
+                <div class="block">Nutrition and exercising becomes easier.</div>
+                <div class="block">Start new journey with Aiym Care! <strong>Register now!</strong></div>
+                <a class="button" href="{{url_for('signup')}}"> Register</a>
+            </div> 
+            <div class="column is-one-quarter">
+                <figure class="image is-128x128">
+                    <img src="{{ url_for('static', filename='woman.png')}}">
+                </figure>  
+            </div>
+        </div>    
+    </div>
+    
+       
+    
+</section>
+<section class="section">
+    <div class="container">
+        <div class="notification is-white">
+            <figure class="image">
+                <img src="{{ url_for('static', filename='mother.jpeg')}}">
+            </figure>
+        </div>
+    </div>
+</section>
+{% endblock %}

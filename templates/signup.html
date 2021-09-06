@@ -1,0 +1,58 @@
+{% extends 'main.html'%}
+
+{% block session %}
+      <div class="navbar-item">
+        <a class="navbar-link">
+          Login
+        </a>
+      </div>
+{% endblock %}  
+
+{% block content %}
+    <section class='section is-medium'>
+        <div class="container">
+            <h1 class="title">Registration form</h1>
+            <form method="POST" action="{{url_for('signup')}}">
+                {{ form.csrf_token }}
+                <div class="field">
+                <div class="control">
+                    {{ form.name.label (class_="label") }}
+                    {{ form.name (class_="input")}}
+                </div>
+                </div>
+                
+                <div class="field">
+                <div class="control">
+                    {{ form.email.label (class_="label") }}
+                    {{ form.email (class_="input") }}
+                </div>
+                </div>
+                <div class="field">
+                <div class="control">
+                    {{ form.password.label (class_="label") }}
+                    {{ form.password (class_="input") }}
+                </div> 
+                </div>
+                <div class="field">
+                <div class="control">
+                    {{ form.confirm.label (class_="label") }}
+                    {{ form.confirm (class_="input") }}
+                </div> 
+                </div>
+                <div class="field">
+                <div class="control">
+                    {{ form.start_date.label (class_="label") }}
+                    {{ form.start_date (class_="input") }}
+                </div> 
+                </div>
+
+                <div>
+                    {{ form.submit (class_="button is-success") }}
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %} 
+
+

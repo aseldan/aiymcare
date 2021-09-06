@@ -1,0 +1,62 @@
+{% extends 'main.html'%}
+
+
+{% block session %}
+      <div class="navbar-item has-dropdown">
+        <a class="navbar-link">
+          Welcome, {{ username }}! 
+        </a>
+      </div>
+{% endblock %}   
+
+
+{% block content %}
+<section class="section is-medium">
+  <div class="container">
+    <div class="tile is-ancestor">
+      
+      <div class="tile is-parent is-4">
+        <div class="tile is-child notification is-white">
+          <p class="title">You baby is {{week}} weeks!</p>
+          <p>Your baby can open and close hands, curl toes! Baby's hair and nails begin to grow. </p>
+          <figure class="image is-4by3">
+            <img src="{{ url_for('static', filename='week12.png')}}">
+          </figure>
+        </div>
+      </div>
+
+      <div class="tile is-parent is-4">
+        <div class="tile is-child notification is-white">
+          <p class="title">It’s a size of an apricot.</p>
+          <p>It’s 5,4 cm and 14 gram.</p>
+          <figure class="image is-4by3">
+            <img src="{{ url_for('static', filename='apricot.png')}}">
+          </figure>
+        </div>
+      </div>
+    </div>
+    
+    <div class="tile is-ancestor">
+      <div class="tile is-parent"> 
+        <div class="tile is-child notification is-success">
+          <p class="title">Recommendations</p>
+          <p>First doctor visit is recommended to have in the first trimester (1-12 weeks) </p>
+          <p>During the first trimester the following laboratory test are done. </p>
+          <p><strong>Laboratory tests:</strong></p>
+          <ul>
+            <li>- Blood test for hemoglobin</li>
+            <li>- Blood type and Rh factor</li>
+            <li>- Urinalysis for protein</li>
+            <li>- Bacteriuria screening (if possible)</li>
+            <li>- HIV</li>
+            <li>- Partner HIV</li>
+            <li>- RW</li>
+            <li>- HbsAg (if possible)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %} 
